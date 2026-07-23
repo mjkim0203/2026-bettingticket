@@ -4,100 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>2026 스포츠 도박 사이트</title>
-    <!DOCTYPE html>
-<html lang="ko">
     <style>
-/* 기본 여백 제거 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        /* 기본 여백 제거 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* 스크롤바 숨기기 (선택 사항) */
-body, html {
-    width: 100%;
-    height: 100%;
-    overflow: hidden; 
-    font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
-    background-color: black;
-  
-}
+        /* 스크롤바 숨기기 및 배경색 설정 */
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; 
+            font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
+            background-color: black;
+        }
 
-/* 비디오 래퍼: 화면 전체를 덮고 뒤로 보냄 */
-.video-wrap {
-    position: fixed; /* 화면에 고정 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-   z-index: 99; /* 컨텐츠보다 뒤에 배치 */
-}
+        /* 비디오 래퍼: 화면 전체를 덮고 맨 앞으로 보냄 */
+        .video-wrap {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 99; /* 비디오가 텍스트를 덮고 맨 위에 오도록 설정 */
+        }
 
-/* 비디오 자체를 반응형으로 꽉 채움 */
-#bg-video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* 영상 비율을 유지하면서 여백 없이 화면을 꽉 채우는 핵심 속성 */
-    bject-position: center center;
-    
-}
+        /* 비디오 자체 설정 (가로 무삭제, 비율 유지) */
+        #bg-video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            object-position: center center; /* 오타 수정됨 */
+        }
 
-/* 비디오 위의 텍스트/컨텐츠 영역 */
-.content {
-    position: relative;
-    z-index: 1; /* 비디오보다 앞으로 배치 */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* 화면 높이만큼 꽉 채움 */
-    color: white;
-    text-align: center;
-    
-}
+        /* 비디오 아래에 깔릴 컨텐츠 영역 */
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+        }
 
-/* 반응형 글자 크기 조정 */
-h1 {
-    font-size: 4rem;
-    margin-bottom: 15px;
-}
+        /* 반응형 글자 크기 조정 */
+        h1 { font-size: 4rem; margin-bottom: 15px; }
+        p { font-size: 1.5rem; }
 
-p {
-    font-size: 1.5rem;
-}
-
-/* 모바일 화면(가로 768px 이하)일 때 글자 크기 줄이기 */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    p {
-        font-size: 1rem;
-    }
-}
-    
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            p { font-size: 1rem; }
+        }
     </style>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>win-betting sports site</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- 배경 비디오 영역 -->
     <div class="video-wrap">
-        <!-- autoplay: 자동재생, loop: 반복, muted: 음소거 (자동재생을 위해 필수), playsinline: 모바일 전체화면 방지 -->
         <video autoplay loop muted playsinline id="bg-video">
-            <source src="assets/패배최종.mov" type="video/mp4">
+            <!-- 🚨 주의: 파일명을 반드시 영문/숫자 .mp4로 변경해서 올리세요 -->
+            <source src="assets/video.mp4" type="video/mp4">
             브라우저가 비디오 태그를 지원하지 않습니다.
         </video>
     </div>
 
-    <!-- 비디오 위에 올라갈 컨텐츠 영역 -->
+    <!-- 컨텐츠 영역 -->
     <div class="content">
-     
+        <!-- 현재는 비디오(z-index:99)에 가려져 보이지 않는 영역입니다. -->
     </div>
 
 </body>
